@@ -1,2 +1,2 @@
 # StockPrice
-Stock ticker web scraping bot
+Program to retrieve stock market data via the yfinance API
