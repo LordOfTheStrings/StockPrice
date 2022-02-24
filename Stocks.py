@@ -4,7 +4,10 @@ from selenium.webdriver.chrome.service import Service
 
 stock = input("Enter the ticker you would like to see data for: ")
 
-url = 'https://finance.yahoo.com/quote/' + stock
+#https://stackoverflow.com/questions/44030983/yahoo-finance-url-not-working#47505102
+url = 'https://query2.finance.yahoo.com/v10/finance/quoteSummary/' + stock + '?modules=price'
+
+#url = 'https://finance.yahoo.com/quote/' + stock
 s = Service(r"C:\Users\mraar\AppData\Local\EdgeDriver\edgedriver_win64\msedgedriver.exe")
 
 #Using Edge because Windows :)
@@ -20,4 +23,5 @@ def check_price():
 	temp = price.find('div', {'class':'condition-data'})#finds condition-data class to find price
 	current = temp.find('span',{'class':'wu-value wu-value-to'}).text #gets current price
 print(check_price.current)
+
 
