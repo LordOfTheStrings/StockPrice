@@ -1,0 +1,2 @@
+- [ ] Make the TODO not ass
+- [ ] Find way to scrape data from yfinance site
